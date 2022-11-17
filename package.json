@@ -1,0 +1,42 @@
+{
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "5.10.9",
+    "@mui/material": "latest",
+    "array-move": "4.0.0",
+    "prop-types": "^15.8.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-sortable-hoc": "2.0.0"
+  },
+  "description": "https://github.com/mui/material-ui/blob/v5.10.12/docs/data/material/components/steppers/HorizontalLinearStepper.js",
+  "devDependencies": {
+    "css-loader": "^6.7.2",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^8.0.0",
+    "react-scripts": "latest",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1"
+  },
+  "name": "7ogcng",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
