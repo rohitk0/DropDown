@@ -2,7 +2,13 @@ import * as React from "react";
 import ReactDOM from "react-dom/client";
 import { StyledEngineProvider } from "@mui/material/styles";
 import CustomAutoCompleteMulti from "./CustomAutoCompleteMulti";
-import { Autocomplete, MenuItem, Select, Stack, Typography } from "@mui/material";
+import {
+  Autocomplete,
+  MenuItem,
+  Select,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 const App = () => {
   const options = [
@@ -33,7 +39,7 @@ const App = () => {
   };
 
   const instantOptions = async () => {
-    return options
+    return options;
   };
 
   return (
@@ -46,8 +52,19 @@ const App = () => {
           label="Select"
           labelAccessor="label"
           value={singleSelectValue}
-          onChange={({ value }) => {
-            setValue(value);
+          onChange={(...args) => {
+            console.log(...args);
+          }}
+        />
+        <CustomAutoCompleteMulti
+          fullWidth
+          fetchOptions={instantOptions}
+          label="Disabled Search"
+          isSearchAble={false}
+          labelAccessor="label"
+          value={singleSelectValue}
+          onChange={(...args) => {
+            console.log(...args);
           }}
         />
         <CustomAutoCompleteMulti
@@ -55,7 +72,6 @@ const App = () => {
           fetchOptions={instantOptions}
           label="Default Select"
           labelAccessor="label"
-          onDragEnd={(option) => console.log(option)}
           value={defaultSingleSelectValue}
           onChange={(...args) => {
             console.log(...args);
@@ -67,7 +83,6 @@ const App = () => {
           fetchOptions={instantOptions}
           label="Clearable Select"
           labelAccessor="label"
-          onDragEnd={(option) => console.log(option)}
           value={defaultSingleSelectValue}
           isSearchAble={true}
           onChange={(...args) => {
